@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+
+      	<record model="ir.actions.act_window" id="action_whoami_form">
+            <field name="name">Who am i</field>
+            <field name="res_model">whoami.info</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click to add a survey.</p>
+                <p>You can create surveys for different purposes: customer opinion, services feedback, recruitment interviews, employee's periodical evaluations, marketing campaigns, etc.</p>
+                <p>Design easily your survey, send invitations to answer by email and analyse answers.</p>
+            </field>
+        </record>
+
+        <menuitem name="Whoami" id="menu_whoami" parent="base.marketing_menu" sequence="25" groups="base.group_test_user"/>
+        <menuitem name="WhoamiItem" id="menu_whoami_form" action="action_whoami_form" parent="menu_whoami" sequence="1"/>
+        
+    </data>
+</openerp>

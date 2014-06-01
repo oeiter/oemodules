@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Survey users -->
+        <record model="res.groups" id="base.group_test_user">
+            <field name="name">Test / User</field>
+        </record>
+
+    </data>
+</openerp>
