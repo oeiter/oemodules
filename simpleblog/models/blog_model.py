@@ -22,3 +22,7 @@ class blog_details(orm.Model):
     _defaults = {
     }
     _sql_constraints = []
+    
+    def get_blog_from_details(self, cr, uid, task_ids, context=None):
+        return ("abc")
+

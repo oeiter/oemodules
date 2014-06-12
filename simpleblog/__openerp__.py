@@ -37,8 +37,11 @@
 
     # any module necessary for this one to work correctly
     'depends': ['web'],
-    'data': ['views/blog_views.xml'],
+    'data': ['views/blog_views.xml','views/template.xml'],
     
     'tests': [
+    ],
+    'qweb' : [
+        "static/src/xml/simpleblog_qweb.xml",
     ],
 }
