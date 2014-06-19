@@ -30,6 +30,13 @@ openerp.simpleblog = function (instance) {
              });
         },
         btn_clicked: function() {
+        	
+        	 var fetch_db = this.rpc("/web/simpbleblog/load", {}).then(
+        	            function(result) {
+        	                alert(result);
+        	            });
+        	 
+        	 
             this.do_action({
                 type: 'ir.actions.act_window',
                 res_model: "simpleblog.category",
@@ -40,4 +47,13 @@ openerp.simpleblog = function (instance) {
             });
         },
     });
+    
+    instance.simpleblog.FieldChar2 = instance.web.form.FieldChar.extend({
+    	init: function (field_manager, node) {
+            this._super(field_manager, node);
+        },
+    });
+
+    instance.web.form.widgets.add('char2', 'instance.simpleblog.FieldChar2');
+    
 };

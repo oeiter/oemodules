@@ -9,6 +9,12 @@ class blog_category(orm.Model):
     _columns = {
         'name': fields.char(string="Category", required=True, translate=True),
     }
+    def preference_save(self, cr, uid, ids, context=None):
+        return {
+            'type': 'ir.actions.client',
+            'tag': 'reload',
+        }
+        
 class blog_details(orm.Model):
     _name = "simpleblog.blogdetails"
 
